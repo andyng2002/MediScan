@@ -40,7 +40,10 @@ export default class UploadPage extends Component {
                         MediScan
                     </Typography>
                     <Typography component='h4' variant='h4' style={{fontFamily: 'Poppins', color: '#5B859A'}}>
-                        Daily text reminders to help you remember when to take your medication.
+                        Scan a picture and we can read the label name and dosage!
+                    </Typography>
+                    <Typography component='h4' variant='h4' style={{fontFamily: 'Poppins', color: '#5B859A'}}>
+                        Add daily text reminders to help you remember when to take your medication
                     </Typography>
                 </Grid>
 
