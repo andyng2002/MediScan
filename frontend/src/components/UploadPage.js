@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import Button from "@mui/material/Button"
+import { styled } from '@mui/material/styles';
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import { FormHelperText } from '@mui/material/FormHelperText';
@@ -13,12 +15,15 @@ export default class UploadPage extends Component {
     }
 
     render() {
-        return <Grid container spacing={1}>
-            <Grid item xs={12} align='center'>
-                <Typography component='h4' variant='h4'>
-                    Create
-                </Typography>
+        return (
+            <Grid container spacing={1}>
+                <Grid item xs={12} align='center'>
+                    <Typography component='h4' variant='h4'>
+                        Create
+                    </Typography>
+                </Grid>
             </Grid>
-        </Grid>
+            // <h1>asd</h1>
+        )
     }
 }
