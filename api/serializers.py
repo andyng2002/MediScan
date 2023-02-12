@@ -5,3 +5,8 @@ class PrescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prescription
         fields = ('id', 'file', 'name', 'dosage', 'frequency', 'created_at')
+        
+class CreatePrescriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Prescription
+        field = ('file')
