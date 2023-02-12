@@ -1,17 +1,18 @@
-import * as React from 'react';
-import { Component } from 'react';
-import Button from "@mui/material/Button"
-import { styled } from '@mui/material/styles';
-import Grid from "@mui/material/Grid"
-import Typography from "@mui/material/Typography"
-import { FormHelperText } from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
-import Link from "react-router-dom"
-import { FormControlLabel } from '@mui/material/FormControlLabel';
+import React, { Component } from 'react';
+import { Button, Grid, Typography, FormHelperText, FormControl, FormControlLabel } from "@mui/material";
 
 export default class UploadPage extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            file: None
+        }
+    }
+
+    handleFileChanged(e) {
+        this.setState({
+            file: e.target.value
+        })
     }
 
     render() {
@@ -19,11 +20,21 @@ export default class UploadPage extends Component {
             <Grid container spacing={1}>
                 <Grid item xs={12} align='center'>
                     <Typography component='h4' variant='h4'>
-                        Create
+                        Upload a Picture of Your Perscription
                     </Typography>
                 </Grid>
+                <Grid item xs={12} align='center'>
+                    <Button variant="outlined" component="label">
+                        Upload
+                        <input hidden accept="image/*" multiple type="file" />
+                    </Button>
+                </Grid>
+                <Grid item xs={12} align='center'>
+                    <FormControl component='fieldset'>
+                        <Button variant='contained' >Next </Button>
+                    </FormControl>
+                </Grid>
             </Grid>
-            // <h1>asd</h1>
         )
     }
 }
