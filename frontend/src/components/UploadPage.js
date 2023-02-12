@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Grid, Typography, FormHelperText, FormControl, FormControlLabel } from "@mui/material";
-<<<<<<< Updated upstream
 import { textAlign } from '@mui/system';
-=======
-import { Link } from 'react-router-dom';
-
->>>>>>> Stashed changes
 export default class UploadPage extends Component {
     constructor(props) {
         super(props);
@@ -48,7 +43,6 @@ export default class UploadPage extends Component {
                         Daily text reminders to help you remember when to take your medication.
                     </Typography>
                 </Grid>
-<<<<<<< Updated upstream
 
                 <Grid container spacing = {8}>
                     <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
@@ -70,15 +64,6 @@ export default class UploadPage extends Component {
                             RECEIVE TEXT ALERTS
                         </Typography>  
                     </Grid>
-=======
-                <Grid item xs={12} align='center'>
-                    <FormControl>
-                        <Button variant="outlined" component="label">
-                            Upload
-                            <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/>
-                        </Button>
-                    </FormControl>
->>>>>>> Stashed changes
                 </Grid>
 
                 <Grid container spacing = {12}>
