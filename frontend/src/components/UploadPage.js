@@ -13,7 +13,7 @@ export default class UploadPage extends Component {
 
     handleFileChanged(e) {
         this.setState({
-            file: e.target.value
+            file: e.target.files[0]
         })
     }
 
@@ -33,7 +33,8 @@ export default class UploadPage extends Component {
                     <FormControl>
                         <Button variant="outlined" component="label">
                             Upload
-                            <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/>
+                            {/* <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/> */}
+                            <input type="file" hidden/>
                         </Button>
                     </FormControl>
                 </Grid>
