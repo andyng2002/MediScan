@@ -48,21 +48,21 @@ export default class UploadPage extends Component {
                 </Grid>
 
                 <Grid container spacing = {8}>
-                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
+                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5", marginBottom: '80px'}}>
                         <Typography component='h3' variant='h3' style={{fontFamily: 'Futura', color: '#8BABBB'}}>
                             SCAN MEDICATION
                         </Typography>
                     </Grid>
-                    <Grid item xs={0.75} align='center' style={{backgroundColor: "#E6E8E6"}}>
+                    <Grid item xs={0.75} align='center' style={{backgroundColor: "#E6E8E6", marginBottom: '80px'}}>
                     </Grid>
-                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
+                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5", marginBottom: '80px'}}>
                         <Typography component='h3' variant='h3' style={{fontFamily: 'Futura', color: '#8BABBB'}}>
                             PHONE NUMBER SIGN UP
                         </Typography>
                     </Grid>
-                    <Grid item xs={0.75} align='center' style={{backgroundColor: "#E6E8E6"}}>
+                    <Grid item xs={0.75} align='center' style={{backgroundColor: "#E6E8E6", marginBottom: '80px'}}>
                     </Grid>
-                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
+                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5", marginBottom: '80px'}}>
                         <Typography component='h3' variant='h3' style={{fontFamily: 'Futura', color: '#8BABBB'}}>
                             RECEIVE TEXT ALERTS
                         </Typography>  
@@ -71,10 +71,10 @@ export default class UploadPage extends Component {
 
                 <Grid container spacing = {12}>
                 <Grid item xs={12} align='center'>
-                    <Typography component='h4' variant='h4' style={{fontFamily: 'Poppins', color: '#5B859A'}}>
+                    <Typography component='h4' variant='h4' style={{fontFamily: 'Poppins', color: '#5B859A', marginBottom: '10px'}}>
                         Upload a Picture of Your Prescription
                     </Typography>
-                    <FormControl>
+                    <FormControl style={{marginBottom: '40px'}}>
                         <Button variant="outlined" component="label" >
                             Upload
                             <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/>
