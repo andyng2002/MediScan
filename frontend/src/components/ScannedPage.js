@@ -6,6 +6,8 @@ export default class ScannedPage extends Component {
     }
 
     render() {
-        return <p>You have scanned your perscription</p>
+        return (
+            <p>You have scanned your perscription</p>
+        )
     }
 }

@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { Button, Grid, Typography, FormHelperText, FormControl, FormControlLabel } from "@mui/material";
+<<<<<<< Updated upstream
 import { textAlign } from '@mui/system';
+=======
+import { Link } from 'react-router-dom';
+
+>>>>>>> Stashed changes
 export default class UploadPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
             file: null
         }
-
+        this.handleFileChanged = this.handleFileChanged.bind(this)
         this.handleNext = this.handleNext.bind(this)
     }
 
@@ -19,6 +24,17 @@ export default class UploadPage extends Component {
 
     handleNext() {
         console.log(this.state)
+        // const requestOptions = {
+        //     method: 'POST',
+        //     headers: {'Content-Type': 'application/json'},
+        //     body: JSON.stringify({
+        //         file: this.state.file
+        //     })
+        // }
+        // fetch('/api/scan', requestOptions)
+        // .then((response) => response.json())
+        // .then((data) => console.log(data))
+        this.props.history.push("/scanned/")
     }
 
     render() {
@@ -32,6 +48,7 @@ export default class UploadPage extends Component {
                         Daily text reminders to help you remember when to take your medication.
                     </Typography>
                 </Grid>
+<<<<<<< Updated upstream
 
                 <Grid container spacing = {8}>
                     <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
@@ -53,6 +70,15 @@ export default class UploadPage extends Component {
                             RECEIVE TEXT ALERTS
                         </Typography>  
                     </Grid>
+=======
+                <Grid item xs={12} align='center'>
+                    <FormControl>
+                        <Button variant="outlined" component="label">
+                            Upload
+                            <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/>
+                        </Button>
+                    </FormControl>
+>>>>>>> Stashed changes
                 </Grid>
 
                 <Grid container spacing = {12}>
@@ -66,7 +92,7 @@ export default class UploadPage extends Component {
                             <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/>
                         </Button>
                     <FormControl component=''>
-                        <Button variant='contained' onClick={this.handleNext} >Next </Button>
+                        <a href='/scanned'><Button variant='contained' onClick={this.handleNext}>Next</Button></a>
                     </FormControl>
                     </FormControl>
                 </Grid>
