@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button, Grid, Typography, TextField, FormHelperText, FormControl, FormControlLabel } from "@mui/material";
 export default class ScannedPage extends Component {
     constructor(props) {
         super(props);
@@ -7,7 +7,34 @@ export default class ScannedPage extends Component {
 
     render() {
         return (
-            <p>You have scanned your perscription</p>
+            <Grid container spacing = {1} style = {{ backgroundColor: "#E6E8E6", height: "101vh", width: "101vw"}}>
+                <Grid item xs={12} align='center' style = {{height: "20wh", width: "20vw"}}>
+                </Grid>
+
+            <Grid container spacing={12} >
+                <Grid item xs={2.5} align='center' style={{backgroundColor: "#E6E8E6"}}>
+                </Grid>
+
+                <Grid item xs={8} align='center' style={{backgroundColor: "#FFFFFF"}}>
+                    <Typography align='center' component='h3' variant='h3' style={{fontFamily: 'Futura', color: '#2F4550', marginBottom: '20px'}}>
+                        METFORMIN 1000MG
+                    </Typography>
+                    <Typography align='center' component='h4' variant='h4' style={{fontFamily: 'Futura', color: '#8BABBB', marginBottom: '60px'}}>
+                        TAKE ONE TABLET BY MOUTH TWICE DAILY
+                    </Typography>
+                    <Typography align='center' component='h4' variant='h4' style={{fontFamily: 'Futura', color: '#8BABBB', marginBottom: '50px'}}>
+                        enter phone number:     
+                        <TextField id="outlined-basic" variant="outlined" />
+                    </Typography>
+                </Grid>
+                
+                <Grid item xs={2.5} align='center' style={{backgroundColor: "#E6E8E6"}}>
+                </Grid>
+            
+                </Grid>
+                <Grid item xs={2} align='center' style={{backgroundColor: "#E6E8E6"}}>
+                </Grid>
+            </Grid>
         )
     }
 }
