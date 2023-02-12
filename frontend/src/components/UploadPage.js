@@ -5,14 +5,20 @@ export default class UploadPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            file: None
+            file: null
         }
+
+        this.handleNext = this.handleNext.bind(this)
     }
 
     handleFileChanged(e) {
         this.setState({
             file: e.target.value
         })
+    }
+
+    handleNext() {
+        console.log(this.state)
     }
 
     render() {
@@ -24,14 +30,16 @@ export default class UploadPage extends Component {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} align='center'>
-                    <Button variant="outlined" component="label">
-                        Upload
-                        <input hidden accept="image/*" multiple type="file" />
-                    </Button>
+                    <FormControl>
+                        <Button variant="outlined" component="label">
+                            Upload
+                            <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/>
+                        </Button>
+                    </FormControl>
                 </Grid>
                 <Grid item xs={12} align='center'>
-                    <FormControl component='fieldset'>
-                        <Button variant='contained' >Next </Button>
+                    <FormControl component=''>
+                        <Button variant='contained' onClick={this.handleNext} >Next </Button>
                     </FormControl>
                 </Grid>
             </Grid>
