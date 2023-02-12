@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Grid, Typography, FormHelperText, FormControl, FormControlLabel } from "@mui/material";
-
+import { textAlign } from '@mui/system';
 export default class UploadPage extends Component {
     constructor(props) {
         super(props);
@@ -23,24 +23,53 @@ export default class UploadPage extends Component {
 
     render() {
         return (
-            <Grid container spacing={1}>
+            <Grid container spacing={1} style = {{ backgroundColor: "#E6E8E6", height: "101vh", width: "101vw"}}>
                 <Grid item xs={12} align='center'>
-                    <Typography component='h4' variant='h4'>
-                        Upload a Picture of Your Perscription
+                    <Typography component='h2' variant='h2' style={{fontFamily: 'Poppins', color: '#2F4550', fontWeight: 'bold', fontSize: '90px' }}>
+                        MediScan
+                    </Typography>
+                    <Typography component='h4' variant='h4' style={{fontFamily: 'Poppins', color: '#5B859A'}}>
+                        Daily text reminders to help you remember when to take your medication.
                     </Typography>
                 </Grid>
+
+                <Grid container spacing = {8}>
+                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
+                        <Typography component='h3' variant='h3' style={{fontFamily: 'Futura', color: '#8BABBB'}}>
+                            SCAN MEDICATION
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={0.75} align='center' style={{backgroundColor: "#E6E8E6"}}>
+                    </Grid>
+                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
+                        <Typography component='h3' variant='h3' style={{fontFamily: 'Futura', color: '#8BABBB'}}>
+                            PHONE NUMBER SIGN UP
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={0.75} align='center' style={{backgroundColor: "#E6E8E6"}}>
+                    </Grid>
+                    <Grid item xs={3.5} align='center' style={{backgroundColor: "#F5F5F5"}}>
+                        <Typography component='h3' variant='h3' style={{fontFamily: 'Futura', color: '#8BABBB'}}>
+                            RECEIVE TEXT ALERTS
+                        </Typography>  
+                    </Grid>
+                </Grid>
+
+                <Grid container spacing = {12}>
                 <Grid item xs={12} align='center'>
+                    <Typography component='h4' variant='h4' style={{fontFamily: 'Poppins', color: '#5B859A'}}>
+                        Upload a Picture of Your Prescription
+                    </Typography>
                     <FormControl>
-                        <Button variant="outlined" component="label">
+                        <Button variant="outlined" component="label" >
                             Upload
                             <input hidden accept="image/*" multiple type="file" onChange={this.handleFileChanged}/>
                         </Button>
-                    </FormControl>
-                </Grid>
-                <Grid item xs={12} align='center'>
                     <FormControl component=''>
                         <Button variant='contained' onClick={this.handleNext} >Next </Button>
                     </FormControl>
+                    </FormControl>
+                </Grid>
                 </Grid>
             </Grid>
         )
